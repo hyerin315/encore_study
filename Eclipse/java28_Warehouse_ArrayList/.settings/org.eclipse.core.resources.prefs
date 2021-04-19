@@ -1,0 +1,12 @@
+eclipse.preferences.version=1
+encoding//src/order/Dao.java=UTF-8
+encoding//src/order/DaoImpl.java=UTF-8
+encoding//src/order/Order.java=UTF-8
+encoding//src/order/OrderService.java=UTF-8
+encoding//src/order/OrderServiceImpl.java=UTF-8
+encoding//src/product/Menu.java=UTF-8
+encoding//src/warehouse/Dao.java=UTF-8
+encoding//src/warehouse/DaoImpl.java=UTF-8
+encoding//src/warehouse/Product.java=UTF-8
+encoding//src/warehouse/Service.java=UTF-8
+encoding//src/warehouse/ServiceImpl.java=UTF-8

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="board.member.MemberMapper"> <!-- 매퍼 파일의 경로 -->
+    <!-- 검색결과를 자동으로 vo로 변환(vo만드는 방법 정의) -->
+	<resultMap type="board.member.Member" id="member"> <!-- 이 result맵을 구분하는 이름을 "member"로 설정 -->
+		<result property="id" column="id" />
+		<result property="pwd" column="pwd" />
+		<result property="name" column="name" />
+		<result property="email" column="email" />
+	</resultMap>
+	<!-- 여기 id값은 구현하려고 하는 메소드의 이름과 같아야함(MemberMapper 메소드 이름) -->
+	<insert id="addMember" parameterType="board.member.Member">
+		insert into member values(#{id}, #{pwd}, #{name}, #{email}) <!-- 파라미터로 받아온 멤버객체(멤버 변수를 의미함 -->
+	</insert>
+	<select id="getMember" resultMap="member" parameterType="String">
+		select * from member where id=#{id}
+	</select>
+	<select id="getMembers" resultMap="member"> 
+		select * from member
+	</select>
+	<update id="editMember" parameterType="board.member.Member">
+		update member set pwd=#{pwd}, email=#{email} where id=#{id}
+	</update>
+	<delete id="delMember" parameterType="String">
+		delete from member where id=#{id}
+	</delete>
+</mapper>
