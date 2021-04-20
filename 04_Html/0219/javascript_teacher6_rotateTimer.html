@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<h3>setInterval()</h3>
+<hr>
+<div><span id="span"></span>
+</div>
+<hr>
+<button id="btn">Stop</button>
+<script>
+var span = document.getElementById("span");
+var timerID = setInterval(printTime, 1000);
+
+btn.onclick = function() {
+	      clearInterval(timerID);
+}
+
+function printTime() {
+	var time= new Date();
+            document.getElementById("span").innerHTML = "현재시각 : " + time.getHours()+"시"+time.getMinutes()+"분"+time.getSeconds()+"초";
+}
+</script>
+</body>
+</html>

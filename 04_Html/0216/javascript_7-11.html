@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>3가지 방법으로 객체 만들기</title>
+<script>
+            // 1. 오브젝트로 만들기
+            var book1 = new Object();
+                       book1.name = "마카롱";
+                       book1.publisher = "민음사";
+                       book1.price = 20000;
+                       book1.serchByName = serchByName;
+                       book1.serchByPublisher = serchByPublisher;
+
+            // 2. 리터럴로 만들기
+            var book2 = {
+                        name : "마카롱",
+                        publisher : "민음사",
+                        price : 20000,
+                        
+                        serchByName : function () { return this.name; },
+                        serchByPublisher : function () { return this.publisher; }
+                        }
+
+             // 3. 프로토타입 만들기
+	function Book3(name, publisher, price) {
+		// 프로퍼티 만들기
+		this.name = name;
+		this.publisher = publisher;
+		this.price = price;
+		
+		// 메소드 만들기
+		this.serchByName = function () { return this.name; }
+		this.serchByPublisher = function () { return this.publisher; }
+             }
+             var book3 = new Book3("마카롱", "민음사", 20000);
+</script>
+</head>
+<body>
+<script>
+document.write(book1.name);
+document.write(book2.name);
+document.write(book3.name);
+</script>
+</body>
+</html>

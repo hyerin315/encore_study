@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>웹 페이지 만들기</title>
+<style>
+   #hr {
+           margin-left : 15px;
+           font : italic bold 45px consolas, sans-serif;
+           color : #0101DF;
+           text-shadow: -1px 0 #0101DF, 0 1px #0101DF, 1px 0 #0101DF, 0 -1px #0101DF;
+         }
+
+    img { 
+            display: block; 
+            margin: 0px auto;
+            object-fit: cover;
+          }
+
+    hr {    
+             border : 0px;
+             height: 1px;
+             background-color: lightgrey;
+        }
+
+    #grid{  display:grid;
+              grid-template-columns:1fr 1fr 1fr;
+              width:250px; height:50px;
+              margin:0 auto;
+           }
+
+    #board {   
+            text-align : center;    
+            font-size : 23px;   
+            color : black;
+              }
+
+    li {
+           color : blue;
+           cursor : pointer
+      }
+
+    li:hover {
+           background : #f7fea9;
+           color : white
+               }
+
+    ul strong {
+           color : dodgerorange;
+                }
+
+    .p1 {
+          font-family : consolas, sans-serif; 
+          font-size : 16px;  
+         }
+
+    .p2 {
+          font-family : consolas, sans-serif; 
+          font-size : 15px;
+          text-align : center;
+          background : #0101DF;
+          height: 400px;
+          color : black;
+         }
+    
+    div > p {
+          cursor : pointer;
+               }
+
+    #btn {
+          z-index : 5;
+          margin-left : 310px;
+          margin-top : -140px;
+          background : #FFFFE0;
+          width : 150px;
+          padding : 15px;
+          border : 2.5pt solid black;
+          border-radius : 50px;
+          border-collapse : collapse;
+          box-shadow: -4px 4px red, -1.4em 0 yellow;
+          transform : rotate(5deg);
+          }
+
+    #btn2 {
+          z-index : 1;
+          margin-left : 800px;
+          margin-top : 30px;
+          background : #FFFFE0;
+          width : 150px;
+          padding : 20px;
+          border : 2.5pt solid black;
+          border-collapse : collapse;
+          box-shadow: 5px 5px green, -1.2em 0 orange;
+          transform : rotate(16deg);
+          }
+
+    #btn3 {
+          z-index : 3;
+          margin-left : 420px;
+          margin-top : 50px;
+          background : pink;
+          width : 130px;
+          padding : 30px;
+          border : 2.5pt solid black;
+          border-collapse : collapse;
+          box-shadow: -5px 5px black;
+          transform : rotate(-24deg);
+          }
+
+    #star {
+          z-index : 1;
+          width: 220px; 
+          height: auto;
+          margin-left : 680px;
+          margin-top : -100px;
+          transform:rotate(25deg);
+          }
+
+    #cloud {
+          z-index : 1;
+          width: 400px; 
+          height: auto;
+          margin-left : 80px;
+          margin-top : -270px;
+          }
+
+    #btn:hover {                    
+          position : relative;
+          bottom : -10px;
+          left : -10px;
+          rotate : 80;
+          }
+
+    #btn2:hover {
+          position : relative;
+          bottom : -10px;
+          left : 10px;
+          }
+
+    #btn3:hover {
+          position : relative;
+          bottom : -10px;
+          left : -10px;
+          }
+
+    #write {
+          float : right;
+          border : 1.5pt solid #0101DF;
+          display : inline-block;
+              }
+
+     thead, tfoot {
+           color : black;
+           border-top : 2px solid orange;
+           border-bottom : 2px solid orange;
+                     }
+
+     td {
+           text-align : center;
+           color : black;
+           border-top : 0.5px solid orange;
+           border-bottom : 0.5px solid orange;
+                     }
+
+    table {
+          height : 150px;
+          width: 100%;
+          border-collapse : collapse;
+          }
+
+    tbody tr:nth-child(even) { /* 짝수 <tr>에 적용*/
+	background : orange;
+            color : white;
+                                    }
+    tbody tr:hover { /* 마우스가 올라오면 pink 배경 */
+	background : pink;
+                                    }
+
+  datails[open] summary::-webkit-details-marker {
+                       display: none;
+                       }
+
+</style>
+<script>
+       function viewPost(obj, text) {
+                  var parent = obj.parentElement.parentElement;
+                  var newDiv = document.createElement("div");
+                  newDiv.innerHTML = text
+                  newDiv.style.color = "black";
+                  newDiv.onclick = function() {
+                  var p = this.parentElement;
+                  p.removeChild(this);
+                  };
+                  parent.appendChild(newDiv);
+       }
+
+       function load(url) {
+               window.location = url;
+       }
+
+</script>
+</head>
+<body>
+      <div id="hr">Portfolio</div>
+
+      <div style="text-align: center">
+      <img  src="img/1.png" height="180" alt="이미지"
+  	        onmouseover="this.src='img/1.png'"
+                     onmouseout="this.src='img/2.png'">
+      <h3>Hi, My name is Hyerin.<br>welcome to my homepage!<h3>              
+      </div> 
+      
+      <div id="grid">
+              <a href="https://github.com/hyerin315"><img src="img/github.png" width="60px" height="60px"></a>
+              <a href="tel:010-4853-1837"><img src="img/call.png" width="60px" height="60px"></a>
+              <a href="mailto:lhl9603@naver.com;"><img src="img/mail.png" width="60px" height="60px"></a>
+      </div>
+      <h5 style="color:grey; text-align: center">@hyerin.Lim<h5><br>
+      
+     <div class="p2"><br>
+           <p id="btn3" style="font-size: 1.5em">????</p>
+           <p id="btn">프로젝트 페이지1 (현. 네이버)</p>
+           <img id="star" src="img/bomb.png" height="180" alt="이미지">
+           <p id="btn2">프로젝트 페이지2 (현. 다음)</p>
+           <img id="cloud" src="img/cloud.png" height="180" alt="이미지">
+     </div>
+
+      <div class="p1"><br>
+          <h3 id="board">Board</h3>
+              <p id="write">write</p>
+      <table>
+	<thead>
+		<tr><th>no.</th><th>title</th><th>writer</th></tr>
+	</thead>
+	<tfoot>
+		<tr></tr>
+	</tfoot>
+             <tbody>
+                         <tr><td>no.1</td><td style="text-align : left;"><details><summary>오늘 하루도 수고 많으셨습니다.</summary><hr style="background-color : blue;"><p>내일도 화이팅! 열심히 해봅시다 :)</p></details></td><td>홍길동</td></tr>
+                         <tr><td>no.2</td><td style="text-align : left;"><details><summary>구경왔어요</summary><hr style="background-color : white;"><p>오늘 처음 보러 왔습니다. <br>잘 부탁드려요</p></details></td><td>둘리</td></tr>
+                         <tr><td>no.3</td><td style="text-align : left;"><details><summary>점심 추천해주세요</summary><p><hr style="background-color : blue;">중식 제외! 부탁드려요</p></details></td><td>고길동</td></tr>
+                         <tr><td>no.4</td><td style="text-align : left;"><details><summary>놀러왔어요</summary><hr style="background-color : white;"><p>더 놀고 싶네요</p></details></td><td>희동이</td></tr>
+             </tbody>
+      </table>
+      </div>
+</body>
+</html>

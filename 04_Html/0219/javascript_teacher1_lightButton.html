@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>전구 변화</title>
+</head>
+<style>
+    #b1 { background : lightyellow; }
+    #b2 { background : lightgray; }
+</style>
+<script>
+   function changeOn() {
+        var img1 = document.getElementById('img1');
+        var switchOn = document.getElementById('b1');
+        var switchOff = document.getElementById('b2');
+        switchOn.style.background = "lightgray";
+        switchOff.style.background = "lightyellow";
+        img1.src = "img/2.png"
+   }
+
+   function changeOff() {
+        var img1 = document.getElementById("img1");
+        var switchOn = document.getElementById('b1');
+        var switchOff = document.getElementById('b2');
+        switchOn.style.background = "lightyellow";
+        switchOff.style.background = "lightgray";
+        img1.src = "img/1.png"
+   }
+
+</script>
+<body>
+     <h3>What Can JavaScript Do?</h3>
+      <button id="b1" onclick="changeOn()">전구 켜기</button>
+      <img id="img1" src = "img/1.png">
+      <button id="b2" onclick="changeOff()">전구 끄기</button>
+</body>
+</html>

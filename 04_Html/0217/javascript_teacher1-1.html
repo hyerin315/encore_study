@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>document.getElementsByTagName()</title>
+<script>
+function change() {
+	var spanArray = document.getElementsByTagName("span");
+            var pArray = document.getElementsByTagName("p");
+            var divArray = document.getElementsByTagName("div");
+	for(var i=0; i<spanArray.length; i++) {
+                   for(var i=0; i<pArray.length; i++) {
+                         for(var i=0; i<divArray.length; i++) {
+                             var span = spanArray[i];
+  	                 span.style.color = "orchid";
+                             span.style.fontSize = "20px";
+
+                             var p = pArray[i];
+	                p.style.color = "blue";
+	                p.style.fontSize = "40px";
+
+                             var div = divArray[i];
+	                div.style.color = "orange";
+                            div.style.fontSize = "20px";
+                    }
+	}
+      }
+}
+
+</script>
+</head>
+<body>
+<h3>짱구는 못말려
+	<button onclick="change()"> 누르세요</button>
+</h3>
+<hr>
+<div>천방지축 어리둥절 빙글빙글 돌아가는 짱구의 하루~</div>
+우리의 짱구는 정말 못말려 (짱구야~)
+짓굿은 <div>장난은 나에게 맡기세요~</div>
+이 세상 누구보다 자신이 있다구요~
+<span>이리모여~ 모두 모여~ 양파를 먹어보자~</span>
+그런 눈으로 바라보면 부끄럽죠~
+엄마~ 아빠~
+나는 <p>인기만점~</p> (짱구야~)
+천방지축 어리둥절 모두가 빙글빙글 모두가 정신이 없네~
+짱구는 대단하네 <p>짱구는 천재라네~</p>
+<span>다음은 무엇을 할까?</span>
+</body>
+</html>

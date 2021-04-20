@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>웹 페이지 만들기</title>
+<style>
+   #hr {
+           font : italic bold 38px consolas, sans-serif;
+           color : white;
+           text-shadow : 0px 0px 3px grey;
+        }
+
+    img { 
+            display: block; 
+            margin: 0px auto;
+            object-fit: cover;
+          }
+
+    hr {    
+             border : 0px;
+             height: 1px;
+             background-color: lightgrey;
+        }
+
+    #grid{  display:grid;
+              grid-template-columns:1fr 1fr 1fr;
+              width:250px; height:50px;
+              margin:0 auto;
+           }
+
+    #board {   
+            text-align : center;    
+            font-size : 21px;   
+            color : white;
+            text-shadow : 0px 0px 4px darkgrey; 
+              }
+
+    li {
+           color : blue;
+           cursor : pointer
+    }
+
+    li:hover {
+           background : #f7fea9;
+           color : white
+    }
+
+    ul strong {
+           color : dodgerorange;
+    }
+
+    .p1 {
+          font-family : consolas, sans-serif; 
+          font-size : 15px;  
+          background : aliceblue;
+         }
+           
+
+</style>
+<script>
+       function viewPost(obj, text) {
+                  var parent = obj.parentElement;
+                  var newDiv = document.createElement("div");
+                  newDiv.innerHTML = text
+                  newDiv.style.color = "black";
+                  newDiv.onclick = function() {
+                  var p = this.parentElement;
+                  p.removeChild(this);
+                  };
+                  parent.appendChild(newDiv);
+       }
+ 
+      function imgSize() {
+	     var img = document.getElementById("myImg");
+	     img.onload = function () {
+	           document.getElementById("mySpan").innerHTML = img.width + "x" + img.height;
+	     }
+       }
+
+</script>
+</head>
+<body>
+      <div id="hr">Portfolio</div>
+
+      <div style="text-align: center">
+      <img id="myImg"  src="img/1.png" height="180" alt="이미지" onmousemove="imgSize()"
+  	        onmouseover="this.src='img/1.png'"
+                     onmouseout="this.src='img/2.png'">
+      <span id="mySpan">이미지 크기</span>
+      <h3>Hi, My name is Hyerin.<br>welcome to my homepage!<h3>              
+      </div> 
+      
+      <div id="grid">
+              <a href="https://github.com/hyerin315"><img src="img/github.png" width="60px" height="60px"></a>
+              <a href="tel:010-4853-1837"><img src="img/call.png" width="60px" height="60px"></a>
+              <a href="mailto:lhl9603@naver.com;"><img src="img/mail.png" width="60px" height="60px"></a>
+      </div>
+      <h5 style="color:grey; text-align: center">@hyerin.Lim<h5>
+
+      <br>
+      <div class="p1"><hr>
+          <h3 id="board">Board</h3>
+              <p style="text-align : right;">write</p>
+
+              <strong>List</strong>
+  	       <ul id="list">
+ 		<li><a href="#" onClick="viewPost(this, '<br>내일도 화이팅<br>'); return false;">오늘 하루도 수고 많으셨습니다.</a></li>
+                         <li><a href="#" onClick="viewPost(this, '<br>잘부탁드려요<br>'); return false;">가입인사 드립니다.</a></li>
+                         <li><a href="#" onClick="viewPost(this, '<br>어렵네요<br>'); return false;">Q. 이거 어떻게 해야하나요?</a></li>
+                         <li><a href="#" onClick="viewPost(this, '<br>중식 제외!<br>'); return false;">오늘 점심 추천해주세요</a></li>
+	      </ul>
+             <hr> 
+       </div>
+</body>
+</html>

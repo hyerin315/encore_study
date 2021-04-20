@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>총합 계산기</title>
+<script>
+var sum=0;
+function calc(cBox) {
+	if(cBox.onclick)
+		sum += parseInt(cBox.value);
+	document.getElementById("sumtext").value = sum;
+}
+</script>
+</head>
+<body>
+<h3>총합 계산기</h3>
+<hr>
+<form>
+	<input type="button" name="1" value="1" 
+		onclick="calc(this)">
+	<input  type="button" name="2" value="2"
+		onclick="calc(this)">
+	<input type="button" name="3" value="3"
+		onclick="calc(this)"><br>
+	<input type="button" name="4" value="4" 
+		onclick="calc(this)">
+	<input  type="button" name="5" value="5"
+		onclick="calc(this)">
+	<input type="button" name="6" value="6"
+		onclick="calc(this)"><br>
+	<input type="button" name="7" value="7"
+		onclick="calc(this)">
+	<input  type="button" name="8" value="8"
+		onclick="calc(this)">
+	<input type="button" name="9" value="9"
+		onclick="calc(this)">
+	<br>합계 <input type="text" id="sumtext" value="0">
+</form>
+</body>
+</html>

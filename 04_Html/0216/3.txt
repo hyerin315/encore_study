@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>휴일 확인</title>
+</head>
+<body>
+<h3>휴일 확인</h3>
+<hr>
+<script>
+function isHollyday() {
+            var day = prompt('월, 화, 수, 목, 금, 토, 일 중 하루 입력');
+            switch(day) {
+                 case '월':
+                 case '화':

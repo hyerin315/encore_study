@@ -1,0 +1,334 @@
+https://mohamparan.tistory.com/
+=> js**
+
+(1)
+보여지는 창에서의 형태로 자바스크립트 코드를 작성하시오.
+- 수식(AX^2+BX+C=0)은 이미지
+- [2차방정식 근 구하기]는 버튼
+- 루트 계산 시 Math.sqrt(_____) 사용
+- prompt와 alert 사용
+- 4가지 경우에 대하여(2차방정식이 아님, 근 없음, 중근, 서로 다른 두 실근) => alert
+- 참고: ____.toPrecision(5) => 소수점 이하 4번째 자리까지 표현
+
+<!DOCTYPE html>
+<html>
+<body>  
+  <h3> 2차 방정식 <img src="./image/exp.png" height=20 /> 의 근 계산</h3> 
+  <button onclick="slove();" >2차방정식 근 구하기</button> 
+
+   <script>  
+    function slove(){ 
+     var a1= prompt("2차방정식의 2차항 계수는 ? ");      
+     var b1= prompt("2차방정식의 1차항 계수는 ? ");   
+     var c1= prompt("2차방정식의 상수항 계수는 ? ");     
+     a=parseInt(a1);  b=parseInt(b1); c=parseInt(c1); 
+     d = b*b - 4*a*c; 
+     if (a==0 ) { alert("2차방정식이 아님!"); }
+     else if (d < 0 ) { alert("근 없음!"); }
+     else if ( d==0 ) {    
+        root1 = (-1*b + Math.sqrt(d)) /(2*a); 
+        alert("중근 : " + root1.toPresion(3));
+     }
+     else {   
+       root1 = (-1*b + Math.sqrt(d)) /(2*a) ;   
+       root2 = (-1*b - Math.sqrt(d)) /(2*a) ;   
+       alert("서로다른 두 실근 : " + root1.toPrecision(3) + "," + root2.toPrecision(3)); // toPrecision(3) => 이 메소드의 역할은???
+     }  
+    } 
+  </script> 
+</body>
+</html> 
+
+(2)
+정확한 암호가 입력될 때까지 계속 prompt()에 암호를 입력하게 하는 코드를 작성하시오.
+암호는 '0216'이며, 정확한 암호가 입력되면 'PASS'가 출력된다.
+
+<!DOCTYPE html> =================================> 학생 답안
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+function con(){
+	while(true){
+	var code = prompt('정확한 암호를 입력해주세요');
+	if(code == '0216'){
+		document.write('PASS');
+		break;
+	}
+	}
+}
+con();
+</script>
+</body>
+</html>
+
+(3)
+prompt() 함수를 이용하여 월, 화, 수, 목, 금, 토, 일 중 하나를 입력 받아
+월~금이 입력되었을 경우 '수업', 다른 요일은 '휴일'을 출력하는 코드를 작성하시오.
+=> function 사용
+
+
+default 추가 작성하면 더 낫겠고, 숫자 sort()하는 부분은 비교함수 사용해서 수정하세요.
+
+<!DOCTYPE html> =================================> 학생 답안
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+function isHolliday(){
+	var day = prompt('월,화,수,목,금,토,일 중 하루 입력');
+	switch(day){
+	case '월':
+	case '화':
+	case '수':
+	case '목':
+	case '금':
+		document.write('수업');
+		break;
+	case '토':
+	case '일':
+		document.write('휴일');
+		break;
+	}
+}
+isHolliday();
+</script>
+</body>
+</html>
+
+(4) 
+- prompt를 사용하여 인원수 입력
+- Array()를 사용하여 해당 인원의 몸무게 추가
+- 해당 인원의 몸무게 총합과 평균 출력
+
+<!DOCTYPE html> =================================> 학생 답안
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>0216 4번 문제</title>
+</head>
+<body>
+<h3>몸무게 총합 구하기</h3>
+<hr>
+<script type="text/javascript">
+var num = prompt("몇명?", 0);
+num = parseInt(num);
+var arr1 = new Array();
+var tmp = 0;
+var sum = 0;
+for(i=0;i<num;i++) {
+	tmp = prompt("몸무게 입력", 0);
+	tmp = parseInt(tmp);
+	arr1[i] = tmp;
+	document.write("arr1["+i+"] = "+arr1[i]+"<br>");
+}
+document.write("<hr>");
+for(j = 0; j <arr1.length;j++)
+	sum += arr1[j];
+document.write(num+"명의 몸무게 합은 "+sum+"kg이다.");
+</script>
+</body>
+</html>
+
+(5)
+- prompt 반복 호출하여 7개의 정수 입력하여 배열에 저장 후 입력된 순서대로 출력
+- 입력된 정수들을 반대로 출력
+- 입력된 정수들을 정렬하여 출력
+
+<!DOCTYPE html> =================================> 학생 답안
+<html>
+<head>
+<meta charset="UTF-8">
+<title>-----</title>
+<script>
+function pr(msg,arr){
+document.write(msg + arr.toString() + "<br>");
+}
+</script>
+</head>
+<body>
+<h3>-----</h3>
+<script>
+var array = new Array();
+for ( i=0; i<6; i++){
+var n = prompt("정수를 입력하세요");
+var m = parseInt(n);
+array[i] = m;
+}
+var c = array.reverse();
+pr("반대로출력",c);
+var c = array.sort();
+pr("정렬후출력",c);	
+</script>
+</body>
+</html>
+
+(6)
+- prompt를 사용하여 문자열 입력(문자열 입력 시 * 문자 포함)
+- *를 기준으로 분할하여 라인별로 출력
+
+<!DOCTYPE html> =================================> 학생 답안
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+var line = prompt(" *를 포함하여 문자열 입력");
+var newLine = line.split('*');
+for(var i =0; i<newLine.length; i++){
+	document.write(newLine[i]+"<br>");
+}
+</script>
+</body>
+</html>
+
+(7)
+- 1에서 100(포함)까지의 난수 10개 생성
+- arr이라는 배열에 저장 후 출력
+- 배열에 저장된 수 중 가장 큰 수 출력
+- 가장 큰 수가 짝수일 경우 배경색을 blue 계열로~
+- 가장 큰 수가 홀수일 경우 배경색을 red 계열로~
+
+<!DOCTYPE html> =================================> 학생 답안
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+var arr = new Array();
+var c;
+var b;
+
+for(i = 0; i < 10; i++)
+	arr[i] = Math.floor(Math.random()*100) + 1;
+document.write("배열 : " + arr.toString() + "<br>");
+c = arr.sort();
+b = c.reverse();
+document.write("가장 큰 수 : " + b[0]);
+
+if(b[0] % 2 == 0){
+	document.body.style.backgroundColor = "lightskyblue";
+}else{
+	document.body.style.backgroundColor = "red";
+}
+</script>
+</body>
+</html>
+
+(8)
+- 책 3권과 관련된 객체: 3가지 방법으로 생성(속성 3가지 이상, 메소드 2가지 이상)
+- new Object() 사용 ===> 확인을 위한 출력 내용 있어야 함
+- 리터럴 표기법 사용 ===> 확인을 위한 출력 내용 있어야 함
+- 프로토타입 사용 ===> 확인을 위한 출력 내용 있어야 함
+
+(9)
+https://www.w3schools.com/html/html_colors.asp
+- 색상을 난수로 처리
+- <div> 태그 사용하여 4X4에 해당하는 박스 출력 후 실행할 때마다 다른 색상의 박스로 출력되도록 작성
+- 참고: div { display: inline-block; width: ______px; padding: ______px; }
+
+<!DOCTYPE html> =================================> 학생 답안
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+div { 
+display: inline-block; 
+width: 50px; 
+padding: 20px; 
+}
+</style>
+</head>
+<body>
+- 색상을 난수로 처리<br/>
+- < div >태크 사용하여 4x4에 해당하는 박스 출력 후 실행 될 때 마다 다른 색상의 박스로 출력되도록 작성.<br/>
+<hr>
+<script>
+for(i=0;i<4;i++){
+	for(j=0;j<4;j++){
+		var r = Math.floor(Math.random()*256);
+		var g = Math.floor(Math.random()*256);
+		var b = Math.floor(Math.random()*256);
+		document.write('<div style = "background-color:rgb('+r+','+g+','+b+')"></div>');
+	}
+	document.write("<br/>");
+}
+</script>
+</body>
+</html>
+
+(10)
+- <ol> 태그를 사용하여 앞으로의 계획 5가지를 나열하시오.
+- <li> 태그를 찾아 글자색이 red로 출력되도록 코드를 작성하시오(javascript: getElementById() 사용). 
+
+(11)
+<!DOCTYPE html>
+<html>
+<script>
+    function changeContent() {         
+       var pTag = document.getElementById("p1");
+       var bTag = document.getElementById("b1");
+       var txt = "이제부터는 자바스크립트를 공부합니다 !";  
+       txt = txt  + "<br><hr>" ; 
+       txt = txt + "<img src='./image/jslogo.png'  width= 150 height=100 /><hr>";  
+       txt = txt + "<p> 즐겁게 열심히 합시다 ! </p>"; 
+       pTag.innerHTML = txt ;
+       bTag.style.visibility = "hidden"; 
+    }   
+</script> 
+<body>
+<h3>What Can JavaScript Do ?</h3>
+<p id="p1">지금까지 HTML과 CSS를 공부했습니다.</p>
+<button id="b1" onclick='changeContent();'> Next </button>
+</body>
+</html>
+
+(12)
+document에 등록할 수 있는 주요 이벤트 리스너
+=> 작성: 15~20개
+
+(13)
+document 객체의 주요 메소드
+=> 작성: 10개
+
+(14)
+<!DOCTYPE html>
+<html>
+<head> 
+<style> 
+ #b1 {  width : 300px;   height : 100px; 
+        border : 1px black solid;
+        text-align : center;
+        line-height : 100px;
+     }  
+</style> 
+</head> 
+<body>
+<script>
+  function changeStyle() { 
+    var divTag = document.getElementById('b1'); 
+
+    divTag.style.fontSize='20px'; 
+    divTag.style.width = '250px';
+    divTag.style.height = '50px'; 
+    divTag.style.lineHeight = '50px'; 
+    divTag.style.borderRadius = '30%';    
+    divTag.style.boxShadow = '5px -5px darkgray';
+  } 
+</script>  
+<h3>What Can JavaScript Do?</h3>
+<div id="b1"> 자바스크립트 입문 </div><br> 
+<button onclick="changeStyle();"> 스타일 변경</button>
+</body>
+</html> 

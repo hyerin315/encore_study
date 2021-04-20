@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<img src="media/math.png" alt="이미지">
+<hr>
+<div id="result"></div>
+<script>
+var result = document.getElementById("result");
+
+function promptEX() {
+       var a = prompt("a에 들어갈 수를 입력하세요");
+       var b = prompt("b에 들어갈 수를 입력하세요");
+       var c = prompt("c에 들어갈 수를 입력하세요");
+       var res = eval((- b + sqrt(b^2 - 4*a*c))/(2*a));
+       if(a && b && c && !== null) {
+                result = res;
+           } else if(a==null) {
+                result.innerHTML = "a에 들어갈 값을 입력 해주세요"
+           } else if(b==null) {
+                result.innerHTML = "b에 들어갈 값을 입력 해주세요"
+           } else if(c==null) {
+                result.innerHTML = "c에 들어갈 값을 입력 해주세요"
+           } else {
+                result.innerHTML = "값을 입력하시오"
+           } return result;
+       }
+}
+function alertEX() {
+            alert(result);
+}
+</script>
+<button onclick="promptEX()">2차방정식 근 구하기</button>
+</body>
+</html>
+
+

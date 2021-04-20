@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>[]로 배열 만들기</title>
+</head>
+<body>
+<h3>[]로 배열 만들기</h3>
+<hr>
+<script>
+function promptEX() {
+        var arr = new Array();
+        while(true) {
+            for(var i=0; i<7; i++) {
+                arr[i] =  prompt("7개의 정수를 입력하세요");
+            }
+            if (arr == null) {
+                 document.write("7개의 정수를 입력하세요");
+            }
+            break;
+       } document.write(arr.sort() + <br> + arr.reverse());
+}
+</script>
+<button onclick="promptEX()">7개의 정수 입력</button>
+</body>
+</html>

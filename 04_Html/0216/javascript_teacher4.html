@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>[]로 배열 만들기</title>
+</head>
+<body>
+<h3>인원수에 따른 몸무게 총합과 평균</h3>
+<hr>
+<script>
+function promptEX() {
+        var person = prompt("인원을 입력하세요");
+        var sum = 0;
+        var weight = new Array();
+        for(i=0; i<person; i++) {
+           weight[i] = prompt("몸무게를 입력하세요", "ex. 50")
+           sum += weight[i];
+        }
+        document.write("몸무게 총합: "+ sum + "<br>" + "몸무게 평균: " +  sum/person);
+}
+</script>
+<button onclick="promptEX()">인원수 및 몸무게 입력</button>
+</body>
+</html>
+        
+        

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>암호를 입력하시오</title>
+</head>
+<body>
+<h3>정확한 암호가 입력될 때까지 숫자를 입력하시오</h3>
+<hr>
+<div id="result"></div>
+<script>
+var result = document.getElementById("result");
+
+function promptEX() {
+        var ret = prompt("암호를 입력하세요", "ex.0000");
+        if(ret == "0216") {
+                 result.innerHTML = "PASS.";
+         } else {
+                 alert("다시 입력하세요");
+         }
+}
+</script>
+<button onclick="promptEX()">암호 입력</button>
+</body>
+</html>

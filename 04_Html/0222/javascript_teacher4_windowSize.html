@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+<script>
+    function halfWindow() {
+           var w1 = window.open( "", "_blank", "width=100, height=100")
+           var width = screen.availWidth/2;
+           var height = screen.availHeight/2;
+           w1.resizeTo(width, height);
+    }
+
+    function quaterWindow() {
+           var w2 = window.open( "", "_blank", "width=100, height=100")
+           var width = screen.availWidth/4;
+           var height = screen.availHeight/4;
+           w2.resizeTo(width, height);
+    }
+</script>
+<button onclick="halfWindow();">half-window</button>
+<button onclick="quaterWindow();">quater-window</button>
+</body>
+</html>
+    

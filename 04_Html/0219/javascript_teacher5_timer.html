@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<h3>setTimeout()</h3>
+<script>
+   var timerID=null;
+   function startTimer(time) {
+           document.getElementById("img1").style.visibility = "visible";
+           timerID = setTimeout(stop, time); //함수호출시 "stop()"도 가능함, 자바스크립트의 원형(자바스크립트는 가능하게 해놨음)
+   }
+
+   function stop() {
+       if(timerID !=null) {
+                 document.getElementById("img1").style.visibility = "hidden";
+                 document.getElementById("ment").style.visibility = "visible";
+                 clearTimeout(timerID);  
+           }
+   }
+</script>
+<hr><div>생각하는시간(5초) <button id="btn" onclick="startTimer(5000)">Start</button></div>
+<hr>
+<img id="img1" style="visibility:hidden" src="img/1.png">
+<div id="ment" style="visibility:hidden">5초가 경과했습니다!</div>
+</body>
+</html>
