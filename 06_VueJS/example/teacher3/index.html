@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>teacher</title>
+</head>
+
+<body>
+    <div id="app-t2">
+        <h1 v-text="header"></h1>
+
+        - 박성진 학생<br>
+        생년월일<br>
+        <select name="year" onchange="handleOnChange(this)">
+                <option v-for="ages in age" v-if="ages >= 1920">{{ages}}</option></div>
+        </select>년
+
+        <select name="month" onchange="handleOnChange(this)">
+            <option v-for="months in month">{{months}}</option>
+        </select>월
+
+        <select name="day" onchange="handleOnChange(this)">
+            <option v-for="days in day">{{days}}</option>
+        </select>일
+
+        <div id='result'></div>
+
+        <br>
+        - 조은상 학생
+        <select name="items" v-model="selected">
+            <option v-for="item in items" v-bind:value="item">{{item}}</option>
+        </select>
+        <div>Selected : {{selected}}</div>
+    </div>
+
+        
+        <!-- index.js를 로드 -->
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>튜토리얼8</title>
+</head>
+
+<body>
+    <div id="app-8">
+        <h1 v-text="header"></h1>
+        <div v-text="message"></div>
+        <br>
+        <div v-text="message1"></div>
+        <hr>
+        <input type="radio" name="items" onclick="app.value=1"><label v-text="label1"></label><br>
+        <input type="radio" name="items" onclick="app.value=2"><label v-text="label2"></label><br>
+        <input type="radio" name="items" onclick="app.value=3"><label v-text="label3"></label><br>
+        <input type="radio" name="items" onclick="app.value=4"><label v-text="label4"></label><br>
+        <hr>
+
+        <div v-if="value==1">
+            <li v-for="flower in flowerList">{{ flower }}</li>
+        </div>
+        <div v-else-if="value==2">
+            <li v-for="food in foodList">{{ food }}</li>
+        </div>
+        <div v-else-if="value==3">
+            <li v-for="nation in nationList">{{ nation }}</li>
+        </div>
+        <div v-else-if="value==4">
+            <li v-for="color in colorList">{{ color }}</li>
+        </div>
+        
+        <!-- index.js를 로드 -->
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>튜토리얼4</title>
+</head>
+
+<body>
+    <div id="app-4">
+        <h1 v-text="header"></h1>
+        <div v-text="message"></div>
+        <div v-text="message1"></div>
+        <br>
+        <input type="checkbox" @click="onClickCheckButton" checked>
+        <span>체크 버튼을 눌러주세요</span>
+        <hr>
+        <div v-show="isChecked" v-text="text1"></div>
+        <br>
+        <div v-text="message2"></div>
+        <div v-text="text2" style="display: inline;"></div>
+        <br>
+        <br>
+        <div v-text="message3"></div>
+        <div v-text="text3" style="display: none;"></div>
+    </div>
+
+    <!-- index.js를 로드 -->
+    <script src="index.js"></script>
+</body>
+
+</html>

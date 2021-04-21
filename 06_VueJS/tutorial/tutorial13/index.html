@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+
+    <title>튜토리얼13</title>
+</head>
+
+<body>
+    <div id="app-13">
+        <h1 v-text="header"></h1>
+        <div v-cloak v-for="message in messages">
+            {{ message }}
+        </div>
+        
+        <br>
+        <div v-cloak>{{ message1 }}</div>
+        <hr>
+        <div v-cloak>{{ message2 }}</div>
+        <div>{{ message2 }}</div>
+    </div>
+
+    <!-- index.js를 로드 -->
+    <script src="index.js"></script>
+</body>
+</html>

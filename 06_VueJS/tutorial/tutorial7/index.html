@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>튜토리얼7</title>
+</head>
+
+<body>
+    <div id="app-7">
+        <h1 v-text="header"></h1>
+        <div v-text="message"></div>
+        <div v-text="message1"></div>
+        <br>
+        <div v-text="message2"></div>
+        <hr>
+        
+        <input type="radio" name="fruits" onclick="app.value=1"><label v-text="label1"></label><br>
+        <input type="radio" name="fruits" onclick="app.value=2"><label v-text="label2"></label><br>
+        <input type="radio" name="fruits" onclick="app.value=3"><label v-text="label3"></label><br>
+        <input type="radio" name="fruits" onclick="app.value=4"><label v-text="label4"></label><br>
+        <hr>
+        <div v-if="value==1" v-text="text1"></div>
+        <div v-else-if="value==2" v-text="text2"></div>
+        <div v-else-if="value==3" v-text="text3"></div>
+        <div v-else-if="value==4" v-text="text4"></div>
+        <div v-else v-text="text5"></div>
+        </div>
+        <!-- index.js를 로드 -->
+    <script src="index.js"></script>
+</body>
+
+</html>

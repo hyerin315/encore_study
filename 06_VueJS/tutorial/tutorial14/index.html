@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>튜토리얼14</title>
+</head>
+
+
+<body>
+    <div id="app-14">
+        <h1 v-text="header"></h1>
+        <div v-for="message in messages">
+            {{ message }}
+        </div>
+
+        <hr>
+        <input type="text" name="text1" v-model:value="message2">
+        <br>
+        <span v-text="message1"></span><span v-once>{{ message2 }}</span>
+        <br>
+        <span v-text="message1"></span><span>{{ message2 }}</span>
+    </div>
+
+    <!-- index.js를 로드 -->
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>설문조사</title>
+</head>
+
+<body>
+    <div id="app-t1">
+        <h1 v-text="header"></h1>
+        <div v-for="message in messages">
+            {{ message }}
+        </div><br>
+        <div v-text="message1" ></div>
+        <li v-for="(website, index) in websiteList"  style="color:blueviolet;">
+            <a v-bind:href="urlList[index]" target="_blank">{{ website }}</a>
+        </li><br>
+        
+        <div v-html="boldText" v-text="message2" ></div>
+        <input type="radio" name="items" onclick="app.value=1"><label v-text="label1"></label><br>
+        <input type="radio" name="items" onclick="app.value=2"><label v-text="label2"></label><br>
+        <input type="radio" name="items" onclick="app.value=3"><label v-text="label3"></label><br>
+        <input type="radio" name="items" onclick="app.value=4"><label v-text="label4"></label><br>
+        <hr>
+
+        <div v-if="value==1">
+            <li v-for="milk in milkList">{{ milk }}</li>
+            <br>
+            <div v-text="text1"></div>
+        </div>
+        <div v-else-if="value==2">
+            <li v-for="yogurt in yogurtList">{{ yogurt }}</li>
+            <br>
+            <div v-text="text2"></div>
+        </div>
+        <div v-else-if="value==3">
+            <li v-for="premium in premiumList">{{ premium }}</li>
+            <br>
+            <div v-text="text3"></div>
+        </div>
+        <div v-else-if="value==4">
+            <li v-for="etc in etcList">{{ etc }}</li>
+            <br>
+            <div v-text="text4"></div>
+        </div>
+        <div v-else v-text="text5"></div>
+        <br>
+
+        <h3>신청자</h3>
+        <div>{{ value1 }}</div>
+        <div><input type="text" v-model="value1"></div>
+
+        <h3>신청 개수</h3>
+        <div v-if="num > 0">
+            <div>신청 개수 : {{ num }}</div>
+        </div>
+        <div v-else>
+            <h4>0개가 선택되었습니다.</h4>
+        </div>
+        <button v-on:click="onClickMinus" v-text="label5"></button>
+        <button v-on:click="onClickPlus" v-text="label6"></button>
+        <hr>
+    </div>
+
+        <!-- index.js를 로드 -->
+        <script src="index.js"></script>
+    </body>
+    
+    </html>

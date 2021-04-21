@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>튜토리얼12</title>
+</head>
+
+<body>
+    <div id="app-12">
+        <h1 v-text="header"></h1>
+        <div v-text="message"></div>
+        
+        <hr> 
+        <div v-text="message1"></div>
+        <div>{{ value1 }}</div>
+        <br>
+        <div v-text="message2"></div>
+        <div v-pre>{{ value2 }}</div>
+    </div>
+
+    <!-- index.js를 로드 -->
+    <script src="index.js"></script>
+</body>
+
+</html>
