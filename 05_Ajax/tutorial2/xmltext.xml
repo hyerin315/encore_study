@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SCHOOL>
+  <STUDENT>
+    <ID>10000001</ID>
+    <NAME>홍길동</NAME>
+    <GRADE>1학년</GRADE>
+    <EMAIL>s10000001@gmail.com</EMAIL>
+  </STUDENT>
+  <STUDENT>
+    <ID>10000002</ID>
+    <NAME>김철수</NAME>
+    <GRADE>2학년</GRADE>
+    <EMAIL>s10000002@gmail.com</EMAIL>
+  </STUDENT>
+  <STUDENT>
+    <ID>10000003</ID>
+    <NAME>이영희</NAME>
+    <GRADE>3학년</GRADE>
+    <EMAIL>s10000003@gmail.com</EMAIL>
+  </STUDENT>
+</SCHOOL>

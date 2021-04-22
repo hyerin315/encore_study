@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>튜토리얼4</title>
+</head>
+
+<body>
+    <h1>튜토리얼4 - 외부 API</h1>
+    <button id="button">외부 API 데이터 받아오기</button>
+    <hr>
+    <div id="text"></div>
+
+    <script>
+        // 버튼 이벤트 등록
+        document.getElementById('button').addEventListener('click', requestLoadText);
+
+        function requestLoadText() {
+            // XMLHttpRequest 오브젝트 생성
+            var xhr = new XMLHttpRequest();
+
+            // 초기화
+            // Method : Http Request Method를 GET으로 설정
+            // URL : 서버상의 파일위치 설정
+            // Async : 비동기롤 설정(true는 비동기,  false는 동기
+            xhr.open('GET', 'https://api.github.com/users', true);
+
+            // 리퀘스트가 완료 이벤트 등록// Request finished. Do processing here.
+            xhr.onload = function () {
+                // ReadyState체크
+                // UNSENT : 초기화가 되지 않은 상태
+                // OPENED : 서버 통신이 시작인 안된 상태
+                // HEADERS_RECEIVED : 레스폰스 헤더를 받은 상태
+                // LOADING : 콘텐츠를 다운로드 중인 상태
+                // Done : 서버 통신이 종료된 상태
+                // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState
+                if (xhr.readyState != xhr.DONE) {
+                    return;
+                }
+
+                // Http에러 체크
+                // 200 - 성공
+                // 403 - "Forbidden"
+                // 404 - "Not Found"
+                // https://developer.mozilla.org/en-US/docs/Web/HTTP/Status 참고
+                if (this.status == 200) {
+                    document.getElementById("text").innerHTML = createTable(this.responseText);
+                    return;
+                }
+
+                document.getElementById('text').innerHTML = 'Http' + this.status + '에러가 발생 했습니다';
+
+            }
+
+            // 리퀘스트 에러 이벤트 등록
+            xhr.onerror = function () {
+                document.getElementById('text').innerHTML = '에러가 발생 했습니다';
+            }
+
+            // 리퀘스트를 서버에게 요청
+            xhr.send();
+        }
+
+        function createTable(jsonText) {
+            var users = JSON.parse(jsonText);
+            var table = "<table>"
+                + "<tr>"
+                + "<th>" + "id" + "</th>"
+                + "<th>" + "node_id" + "</th>"
+                + "<th>" + "avatar_url" + "</th>"
+                + "<th>" + "url" + "</th>"
+                + "<th>" + "html_url" + "</th>"
+                + "</tr>";
+
+            for (var i = 0; i < users.length; i++) {
+                var user = users[i];
+                table += "<tr>"
+                    + "<td>"
+                    + user.id
+                    + "</td>"
+                    + "<td>"
+                    + user.node_id
+                    + "</td>"
+                    + "<td>"
+                    + user.avatar_url
+                    + "</td>"
+                    + "<td>"
+                    + user.url
+                    + "</td>"
+                    + "<td>"
+                    + user.html_url
+                    + "</td>"
+                    + "</tr>";
+            }
+
+            table += "</table>";
+            return table;
+        }
+    </script>
+</body>
+
+</html>
