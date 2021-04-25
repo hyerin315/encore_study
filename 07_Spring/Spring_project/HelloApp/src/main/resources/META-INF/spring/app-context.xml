@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<description>Example configuration to get you started.</description>
+
+<!--    어노테이션을 위한 부분       -->
+	<context:component-scan base-package="ioc" />
+
+<!-- 	<bean id="tv" class="ioc.SamsungTV" init-method="initMethod"  -->
+<!-- 	destroy-method="destroyMethod" lazy-init="true" scope="prototype"> -->
+<!-- 		<constructor-arg ref="speaker"></constructor-arg> -->
+<!-- 		<constructor-arg value="15000000"></constructor-arg> -->
+   		    <!-- 자동 호출하기 때문에 speaker가 생성되는 게 우리 눈에 보이지 않음 (첫 번째 선언하면 첫 번째 매개변수, 두 번째 선언하면 두 번째 매개변수 -->
+            <!-- ref : 주소 전달 / value : 값 전달 -->
+<!-- 	</bean> -->
+
+<!--     <bean id="tv" class="ioc.LgTV" p:speaker-ref="speakers" p:price="2450000"> -->
+<!--     	<property name="speaker" ref="speakers"></property> -->
+<!--     	<property name="price" value="270000"></property> -->
+<!--     </bean> -->
+
+<!-- 	<bean id="speakers" class="ioc.AppleSpeaker"></bean> -->
+</beans>

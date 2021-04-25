@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<item key="selection" value="list?"/>
+		<list key="findhistory">
+			<item value="list?"/>
+			<item value="1"/>
+			<item value="grid1"/>
+			<item value="delete"/>
+			<item value="String upDir = new ClassPathResource(&quot;/static/contents/storage/main_images&quot;).getFile().getAbsolutePath();"/>
+			<item value="img_create"/>
+			<item value="img_delete"/>
+			<item value="ClassPathResource"/>
+			<item value="member"/>
+			<item value="img_update"/>
+			<item value="list_by_cateno"/>
+			<item value="list_bycateno"/>
+			<item value="List&lt;Contents_UsersVO&gt;"/>
+			<item value="list_by_cateno_search_paging_join"/>
+			<item value="users"/>
+		</list>
+		<list key="replacehistory">
+			<item value="users"/>
+			<item value=""/>
+			<item value="Users"/>
+			<item value="name"/>
+			<item value="rdate"/>
+			<item value="tr"/>
+			<item value="noticeno"/>
+			<item value="filename"/>
+			<item value="member2"/>
+			<item value="WHERE"/>
+			<item value="FROM"/>
+			<item value="SELECT"/>
+			<item value="}"/>
+			<item value="${"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="-250"/>
+		<item key="DIALOG_Y_ORIGIN" value="326"/>
+		<item key="DIALOG_WIDTH" value="340"/>
+		<item key="DIALOG_HEIGHT" value="454"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+</section>

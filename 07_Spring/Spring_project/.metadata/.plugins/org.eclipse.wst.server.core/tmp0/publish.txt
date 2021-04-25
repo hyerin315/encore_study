@@ -1,0 +1,5 @@
+#Tomcat publish data
+#Mon Mar 29 11:08:27 KST 2021
+org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\Playdata\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.tomcat.embed\\tomcat-embed-el\\9.0.44\\89ca10859f21e49077d3588d1e5c049a23e93518\\tomcat-embed-el-9.0.44.jar=WEB-INF/lib/tomcat-embed-el-9.0.44.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\LHR\\Spring\\spring\\maven\\org\\springframework\\spring-web\\4.3.14.RELEASE\\spring-web-4.3.14.RELEASE.jar=WEB-INF/lib/spring-web-4.3.14.RELEASE.jar
+org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\Playdata\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework\\spring-web\\5.3.5\\8233c67b3f33f619f6f8f34cc0f56e01a00e136e\\spring-web-5.3.5.jar=WEB-INF/lib/spring-web-5.3.5.jar

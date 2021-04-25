@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=sample/C:\/Users\/Playdata\/.gradle\/caches\/modules-2\/files-2.1\/org.springframework\/spring-context\/5.3.5\/15166e945c1221016a534f1aa83bbddf992dba0a\/spring-context-5.3.5.jar=/org.eclipse.jst.component.dependency=/\/WEB-INF\/lib=/=/gradle_used_by_scope=/main,test=/=/org.eclipse.jst.component.dependency=/\/WEB-INF\/lib=/&lt;org.springframework.validation(Validator.class[Validator" modifiers="1537" timestamp="1616118751293"/>
+<typeInfo handle="=sample/C:\/Users\/Playdata\/.gradle\/caches\/modules-2\/files-2.1\/org.junit.jupiter\/junit-jupiter-params\/5.7.1\/6f81b3c053433a8a40a378d2b4f056c5c31e50ff\/junit-jupiter-params-5.7.1.jar=/org.eclipse.jst.component.dependency=/\/WEB-INF\/lib=/=/gradle_used_by_scope=/test=/=/test=/true=/=/org.eclipse.jst.component.nondependency=/=/&lt;org.junit.jupiter.params.provider(EnumSource$Mode$Validator.class[Validator" modifiers="1546" timestamp="1616118764943"/>
+</typeInfoHistroy>

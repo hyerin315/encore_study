@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="coll" class="coll.CollectionBean">
+		<property name="proper">
+			<props>
+				<prop key="고길동2">서울시 강남구 역삼동</prop>
+				<prop key="마이콜2">서울시 성동구 성수동</prop>
+			</props>
+		</property>
+		<property name="list"><!-- 멤버면수 명과 이름은 똑같아야함 -->
+			<list>
+				<value>서울시 강남구 역삼동</value>
+				<value>서울시 성동구 성수동</value>
+				<value>서울시 연수구 송도동</value>
+			</list>
+		</property>
+		<property name="map"><!-- 멤버면수 명과 이름은 똑같아야함 -->
+			<map>
+				<entry>
+					<key><value>고길동</value></key>
+					<value>서울시 강남구 역삼동 </value>
+				</entry>
+				<entry>
+					<key><value>마이콜</value></key>
+					<value>서울시 성동구 성수동</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+</beans>
