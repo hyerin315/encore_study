@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DB연결할 때 필요한 것 -->
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<environments default="mybatis_test"> <!-- 작업 공간에 대한 이름  (작업공간을 구분하는 id) -->
+		<environment id="mybatis_test">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED"> <!-- 커넥션 객체 미리 생성 : 메모리 풀에 담갔던 것을 하나씩 꺼내 주는 것 -->
+				<property name="driver" value="oracle.jdbc.driver.OracleDriver" /> <!-- 앞의 driver, url, username, password는 바뀌면 안됨 -->
+				<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe" />
+				<property name="username" value="hr" />
+				<property name="password" value="hr" />
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+       <mapper resource="sqlmap/MemberMapper.xml"/> <!-- 중요 - Mapper파일을 추가해주면, 경로를 참고해서 객체 생성 -->
+       <!-- 게시판 연동이 늘어나면 위 17라인의 줄이 늘어나게 됨 -> 이럴 땐 "sqlmap/*.xml"로 처리하면 모든 Mapper을 처리하라  -->
+    </mappers>
+</configuration>
