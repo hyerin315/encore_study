@@ -10,7 +10,7 @@ from polls.models import Choice, Question
 
 def index(request):
     latest_question_list = Question.objects.all().order_by('-pub_date')[:5] #상위 5개만 가져와 담음
-    context = {'latest_question_list': latest_question_list}
+    context = {'latest_question_list': latest_question_list} #key값과 value값으로 딕셔너리 생성
     return render(request, 'polls/index.html', context)
 
 def detail(request, question_id):

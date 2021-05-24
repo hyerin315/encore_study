@@ -1,4 +1,4 @@
-{% if latest_question_list %}
+{% if latest_question_list %} #키값에 값이 들어있다면 for문, 아니면 else로
     <ul>
     {% for question in latest_question_list %}
         <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
